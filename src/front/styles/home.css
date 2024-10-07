@@ -1,7 +1,391 @@
-/*
-    home.css: This website contains selectors only used in home.css
+/* Estilos generales */
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    All pages share the styles on index.css but you should create 
-    one more css for each page that will contain the selected used 
-    on that page only (the ones not reused in other pages).
-*/
+/* Contenedor principal */
+.home-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Banner principal */
+.main-banner {
+  position: relative;
+  width: 100%;
+  max-height: 600px;
+  overflow: hidden;
+}
+
+.main-banner img {
+  width: 100%;
+  height: auto;
+}
+
+.banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: rgb(21, 19, 19);
+}
+
+.banner-text h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.shop-now-btn {
+  background-color: #000;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+
+.shop-now-btn:hover {
+  background-color: #333;
+}
+
+/* Sección de categorías */
+.category-section {
+  display: flex;
+  justify-content: space-around;
+  margin: 50px 0;
+}
+
+.category-item {
+  text-align: center;
+}
+
+.category-item img {
+  width: 100%;
+  height: auto;
+  border: 1px solid #ddd;
+  transition: transform 0.3s ease;
+}
+
+.category-item h2 {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  text-transform: uppercase;
+}
+
+.category-item:hover img {
+  transform: scale(1.05);
+}
+
+/* Sección de productos destacados */
+.featured-products-section {
+  text-align: center;
+  margin: 50px 0;
+}
+
+.featured-products-section h2 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.featured-products {
+  display: flex;
+  justify-content: space-around;
+}
+
+.product-item {
+  text-align: center;
+}
+
+.product-item img {
+  width: 100%;
+  height: auto;
+  border: 1px solid #ddd;
+  transition: transform 0.3s ease;
+}
+
+.product-item h3 {
+  font-size: 1.3rem;
+  margin-top: 15px;
+  text-transform: uppercase;
+}
+
+.product-item p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.product-item:hover img {
+  transform: scale(1.05);
+}
+
+/* Pie de página */
+.footer {
+  background-color: #f7f7f7;
+  padding: 20px 0;
+  text-align: center;
+  border-top: 1px solid #ddd;
+}
+
+.footer p {
+  color: #666;
+  font-size: 1rem;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: #f7f7f7;
+  padding: 15px 30px;
+  border-bottom: 1px solid #ddd;
+}
+
+
+
+/* Estilo de los enlaces de navegación */
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #007bff;
+}
+
+/* Estilo del buscador */
+.search-bar {
+  display: flex;
+  align-items: center;
+}
+
+.search-bar input {
+  padding: 8px 15px;
+  border-radius: 30px;
+  border: 1px solid #ccc;
+  margin-right: 10px;
+}
+
+.search-bar button {
+  padding: 8px 20px;
+  border-radius: 30px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+  background-color: #0056b3;
+}
+
+/* Estilo del ícono de usuario */
+.user-icon a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+}
+
+
+
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #1a1a1a; /* Fondo negro */
+  color: #ffffff; /* Texto blanco */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.navbar-brand a {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff; /* Color del texto */
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 15px; /* Espaciado entre enlaces */
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #cccccc; /* Color gris claro para enlaces */
+}
+
+.nav-links a:hover {
+  color: #ffffff; /* Color blanco al pasar el mouse */
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+}
+
+.search-bar input {
+  padding: 8px;
+  border: 1px solid #333; /* Bordes oscuros */
+  border-radius: 4px;
+  background-color: #333; /* Fondo del input oscuro */
+  color: #ffffff; /* Texto blanco */
+}
+
+.search-bar button {
+  padding: 8px 12px;
+  margin-left: 5px;
+  background-color: whitesmoke; /* Color del botón de búsqueda */
+  color: black;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.search-bar button:hover {
+  background-color: #0056b3; /* Color al pasar el mouse */
+}
+
+.user-icon {
+  padding: 10px 15px;
+  background-color: #444; /* Fondo gris oscuro */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center; /* Alinear el ícono y texto */
+  transition: background-color 0.3s; /* Transición suave */
+}
+
+.user-icon:hover {
+  background-color: #007bff; /* Cambia a azul al pasar el mouse */
+}
+
+.user-icon i {
+  margin-right: 5px; /* Espaciado entre ícono y texto */
+}
+ 
+/* Estilo del cart */
+.cart-container {
+  padding: 30px;
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  max-width: 700px;
+  margin: 20px auto;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.cart-items {
+  margin-bottom: 30px;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #f0f0f0;
+  padding: 15px 0;
+}
+
+.cart-item img {
+  width: 70px; /* Ajusta el tamaño de la imagen */
+  height: auto;
+  border-radius: 4px;
+}
+
+.item-details {
+  flex: 1;
+  margin-left: 15px;
+}
+
+.item-details h2 {
+  font-size: 16px;
+  font-weight: 500;
+  color: #555;
+  margin: 0;
+}
+
+.item-details p {
+  font-size: 14px;
+  color: #999;
+  margin: 5px 0 0;
+}
+
+.empty-cart {
+  text-align: center;
+  padding: 20px;
+  font-size: 16px;
+  color: #999;
+}
+
+.pay-button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background-color: #000; /* Color negro para el botón */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pay-button:hover {
+  background-color: #333; 
+}
+
+.category-item {
+  text-align: center; 
+}
+
+.category-item a {
+  text-decoration: none; 
+  color: inherit; 
+  display: block; 
+}
+
+.category-item a:hover {
+  color: #007bff; 
+}
